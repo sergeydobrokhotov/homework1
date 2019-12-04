@@ -14,7 +14,7 @@ public class Main {
         // задание 4
         System.out.println(printpredsumm(20, 6));
         //  задание 5
-        chislo(7);
+        chislo(8);
         // задание 6
         System.out.println(printboolchislo(5));
         // задание 7
