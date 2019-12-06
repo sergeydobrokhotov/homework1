@@ -1,4 +1,4 @@
-package geekbrains.homework2;
+package geekbrains.homework1.homework2;
 
 
 public class App {
@@ -24,8 +24,11 @@ public class App {
         System.out.print("Неизменнный: ");
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
-            if (arr[i] == 0) arr[i] = 1;
-            else arr[i] = 0;
+            if (arr[i] == 0) {
+                arr[i] = 1;
+            } else {
+                arr[i] = 0;
+            }
         }
         System.out.print("\nИзмененный:  ");
         for (int i : arr) {
@@ -47,7 +50,7 @@ public class App {
     }
 
 
-    private static void  createMassiv(){
+    private static void createMassiv() {
         System.out.println("\nЗадание 3.");
         int[] arr = new int[]{1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
         System.out.print("Неизменнный: ");
