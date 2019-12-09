@@ -99,7 +99,7 @@ public class App {
         //Задать одномерный массив и найти в нем
         // минимальный и максимальный элементы (без помощи интернета);
         private static void min_maxMassiv(){
-            System.out.println("\nЗадание 4.");
+            System.out.println("\nЗадание 5.");
             int[] arr = {1, 5, 3, 2, 19, 4, -5, 2, 4, -8, 9, 1};
             int min = arr[0];
             int max = arr[0];
