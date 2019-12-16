@@ -1,6 +1,11 @@
 package geekbrains.homework1.homework4;
-import java.util.*;
+import java.util.Random;
+import java.util.Scanner;
+
+
+
 public class Cross {
+
     static final int SIZE_X = 3;
     static final int SIZE_Y = 3;
 
@@ -83,21 +88,16 @@ public class Cross {
     }
 
     static boolean checkWin(char symbol) {
-        if (field[0][0] == symbol && field[0][1] == symbol && field[0][2] == symbol)
-            return true;
-        if (field[1][0] == symbol && field[1][1] == symbol && field[1][2] == symbol)
-            return true;
-        if (field[2][0] == symbol && field[2][1] == symbol && field[2][2] == symbol)
-            return true;
-        if (field[0][0] == symbol && field[1][0] == symbol && field[2][0] == symbol)
-            return true;
-        if (field[0][1] == symbol && field[1][1] == symbol && field[2][1] == symbol)
-            return true;
-        if (field[0][2] == symbol && field[1][2] == symbol && field[2][2] == symbol)
-            return true;
-        if (field[0][0] == symbol && field[1][1] == symbol && field[2][2] == symbol)
-            return true;
-        if (field[2][0] == symbol && field[1][1] == symbol && field[0][2] == symbol)
+        for (int i = 0; i < 3; i++)
+            if ((field[i][0] == symbol && field[i][1] == symbol &&
+                field[i][2] == symbol) ||
+                    (field[0][i] == symbol && field[1][i] == symbol &&
+                            field[2][i] == symbol))
+                return true;
+        if ((field[0][0] == symbol && field[1][1] == symbol &&
+                field[2][2] == symbol) ||
+                (field[2][0] == symbol && field[1][1] == symbol &&
+                        field[0][2] == symbol))
             return true;
         return false;
     }
@@ -110,7 +110,7 @@ public class Cross {
             playerStep();
             printField();
             if (checkWin(PLAYER_DOT)) {
-                System.out.println("Вы победили");
+                System.out.println("Вы выиграли");
                 break;
             }
             if (isFieldsFull()) {
@@ -120,7 +120,7 @@ public class Cross {
             aiStep();
             printField();
             if (checkWin(AI_DOT)) {
-                System.out.println("SkyNet  Победил");
+                System.out.println("SkyNet победил");
                 break;
             }
             if (isFieldsFull()) {
@@ -130,6 +130,4 @@ public class Cross {
         }
     }
 }
-
-
 
