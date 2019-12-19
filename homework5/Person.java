@@ -19,7 +19,7 @@ public class Person {
         }
 
     public String toString() {
-        return "Person fio = '" + getFio() + "' \n" +
+        return "Person FIO = '" + getFio() + "' \n" +
                 "  post = '" + getPost() + '\'' +
                 ", email = '"  + getEmail() + '\'' +
                 ", phone = '" + getPhone() + '\'' +
